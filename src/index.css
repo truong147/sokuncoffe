@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-coffee-dark;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-coffee-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200 shadow-sm hover:shadow;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-coffee-orange border-2 border-coffee-orange px-6 py-3 rounded-lg font-semibold hover:bg-coffee-orange hover:text-white transition-colors duration-200 shadow-sm hover:shadow;
+  }
+  
+  .product-card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden;
+  }
+
+  /* Slick carousel custom styles */
+  .slick-dots {
+    @apply bottom-4;
+  }
+
+  .slick-dots li button:before {
+    @apply text-white opacity-70;
+  }
+
+  .slick-dots li.slick-active button:before {
+    @apply text-white opacity-100;
+  }
+
+  /* Navbar scroll effect */
+  header.scrolled {
+    @apply bg-white/90 shadow-lg;
+  }
+
+  /* Responsive page spacing */
+  .page-content {
+    @apply pt-28;
+  }
+
+  @media (max-width: 768px) {
+    .page-content {
+      @apply pt-24;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-content {
+      @apply pt-20;
+    }
+  }
+
+  /* Banner positioning */
+  .hero-banner {
+    @apply -mt-16 relative z-10;
+  }
+
+  /* Transition effects */
+  .page-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Navbar & header effects */
+  .scrolled .navbar-logo {
+    @apply scale-90;
+  }
+}
